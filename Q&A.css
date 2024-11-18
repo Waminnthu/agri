@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Navbar Styling */
+.topnav {
+    background-color: #4CAF50;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.topnav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.topnav .dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    border-radius: 8px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 10px 15px;
+    display: block;
+    font-size: 16px;
+}
+
+.search-container input[type="text"] {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.search-container button {
+    padding: 8px;
+    background-color: #ddd;
+    border: none;
+    cursor: pointer;
+}
+
+/* Contact Container */
+.contact-container {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 1200px; /* Maximum width for larger screens */
+    margin: auto; /* Center the container */
+    flex: 1; /* Make container stretch to fill the page */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: space-between; /* Even spacing */
+    animation: fadeIn 0.8s ease-in-out; /* Smooth fade-in animation */
+}
+
+/* Page Header */
+.contact-container h1 {
+    text-align: center;
+    color: #4CAF50; /* Green header */
+    font-size: 36px;
+    margin-bottom: 40px;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    text-shadow: 1px 2px 8px rgba(0, 0, 0, 0.1); /* Light shadow for emphasis */
+}
+
+/* h2 */
+.contact-container h2 {
+    text-align: center;
+    color: #4CAF50; /* Green header */
+    font-size: 30px;
+    margin-bottom: 40px;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    text-shadow: 1px 2px 8px rgba(0, 0, 0, 0.1); /* Light shadow for emphasis */
+}
+
+/* Contact List */
+.contact-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Flexible column layout */
+    gap: 30px; /* Spacing between cards */
+    margin-bottom: 30px; /* Spacing at the bottom */
+}
+
+/* Contact Card */
+.contact-card {
+    background: #f9f9f9; /* Light gray background for cards */
+    padding: 25px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Soft shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%; /* Ensures equal height cards */
+}
+
+.contact-card:hover {
+    transform: translateY(-8px); /* Lift on hover */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.contact-card h2 {
+    font-size: 24px; /* Slightly larger names */
+    color: #4CAF50;
+    margin-bottom: 15px;
+}
+
+.contact-card p {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #555; /* Medium gray text */
+    line-height: 1.6; /* Improved readability */
+}
+
+/* Footer */
+footer {
+    background: #4CAF50;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: auto; /* Push footer to the bottom */
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-card {
+        padding: 20px;
+    }
+
+    .contact-card h2 {
+        font-size: 20px;
+    }
+
+    .contact-card p {
+        font-size: 14px;
+    }
+}
